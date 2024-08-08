@@ -1,0 +1,6 @@
+DROP EXTENSION IF EXISTS "uuid-ossp";
+
+DROP TABLE IF EXISTS "tenant";
+DROP TABLE IF EXISTS "users";
+DROP TABLE IF EXISTS "categories";
+DROP TABLE IF EXISTS "accounts";

@@ -1,0 +1,11 @@
+version: '3.3'
+
+services:
+  migrate:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: migrate-service
+    volumes:
+      - ./migrations:/migrations
+    entrypoint: ["migrate", "-path", "/migration", "-database", "postgresql://postgres:postgres@localhost:5432/gestorfinancego?sslmode=disable", "up"]
